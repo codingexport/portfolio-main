@@ -4,7 +4,7 @@ import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "./Loader";
+import CanvasLoader from "../sections/Loader";
 
 const Earth = () => {
   const earth = useGLTF("/planet/scene.gltf");
@@ -12,11 +12,11 @@ const Earth = () => {
 
   useFrame(() => {
     if (earthRef.current) {
-      earthRef.current.rotation.y += 0.002; // slow rotation
+      earthRef.current.rotation.y += 0.002; // smooth rotation
     }
   });
 
-  return <primitive ref={earthRef} object={earth.scene} scale={2.5} />; // smaller scale
+  return <primitive ref={earthRef} object={earth.scene} scale={2.5} />;
 };
 
 const EarthCanvas = () => {
@@ -60,7 +60,7 @@ const Contact = () => {
         "template_17us8im",
         {
           from_name: formData.name,
-          to_name: "akhil",
+          to_name: "Akhil",
           from_email: formData.email,
           to_email: "akhilesh7753849928sahani@gmail.com",
           message: formData.message,
@@ -71,7 +71,7 @@ const Contact = () => {
       setFormData({ name: "", email: "", message: "" });
       showAlertMessage("success", "Your message has been sent!");
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setIsLoading(false);
       showAlertMessage("danger", "Something went wrong!");
     }
@@ -93,7 +93,7 @@ const Contact = () => {
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="feild-label">Full Name</label>
+            <label htmlFor="name" className="field-label">Full Name</label>
             <input
               id="name"
               name="name"
@@ -107,7 +107,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="email" className="feild-label">Email</label>
+            <label htmlFor="email" className="field-label">Email</label>
             <input
               id="email"
               name="email"
@@ -121,7 +121,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="message" className="feild-label">Message</label>
+            <label htmlFor="message" className="field-label">Message</label>
             <textarea
               id="message"
               name="message"
