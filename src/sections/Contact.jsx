@@ -1,37 +1,7 @@
-import { useState, Suspense, useRef } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../sections/Loader";
-
-const Earth = () => {
-  const earth = useGLTF("/planet/scene.gltf");
-  const earthRef = useRef();
-
-  useFrame(() => {
-    if (earthRef.current) {
-      earthRef.current.rotation.y += 0.002; // smooth rotation
-    }
-  });
-
-  return <primitive ref={earthRef} object={earth.scene} scale={2.5} />;
-};
-
-const EarthCanvas = () => {
-  return (
-    <Canvas className="w-full h-full" camera={{ position: [5, 3, 5], fov: 45 }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={true} autoRotate={false} />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[2, 5, 2]} intensity={1} />
-        <Earth />
-        <Preload all />
-      </Suspense>
-    </Canvas>
-  );
-};
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -78,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex flex-col-reverse md:flex-row items-center c-space section-spacing gap-10">
+    <section className="relative flex flex-col items-center c-space section-spacing gap-10">
       <Particles className="absolute inset-0 -z-50" quantity={100} ease={80} color="#ffffff" refresh />
 
       {/* Form */}
@@ -141,11 +111,6 @@ const Contact = () => {
             {!isLoading ? "Send" : "Sending..."}
           </button>
         </form>
-      </div>
-
-      {/* Earth */}
-      <div className="flex-1 w-full h-[300px] md:h-[500px]">
-        <EarthCanvas />
       </div>
     </section>
   );
