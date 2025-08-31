@@ -13,22 +13,22 @@ export const myProjects = [
     ],
     href: "https://drive.google.com/drive/folders/1M5PjxHjm5N_xBZ9SDlvY81PDk3DveUCk?usp=sharing",
     logo: "",
-    image: "/assets/projects/images.png",
+    image: "./assets/projects/images.png",
     tags: [
       {
         id: 1,
         name: "SQL",
-        path: "/assets/logos/sql.svg",
+        path: "./assets/logos/sql.svg",
       },
       {
         id: 2,
         name: "Excel",
-        path: "/assets/logos/excel.svg",
+        path: "./assets/logos/excel.svg",
       },
       {
         id: 3,
         name: "Power BI",
-        path: "/assets/logos/Power_BI.svg",
+        path: "./assets/logos/Power_BI.svg",
       },
 
     ],
@@ -47,12 +47,12 @@ export const myProjects = [
     ],
     href: "https://github.com/codingexport/Google_JoB_Trend_Dashboard",
     logo: "",
-    image: "/assets/projects/imageb.png",
+    image: "./assets/projects/imageb.png",
     tags: [
       {
         id: 1,
         name: "Power BI",
-        path: "/assets/logos/Power_BI.svg",
+        path: "./assets/logos/Power_BI.svg",
       },
       ,
     ],
@@ -71,17 +71,17 @@ export const myProjects = [
     ],
     href: "https://github.com/codingexport/ExcelDashboard",
     logo: "",
-    image: "/assets/projects/imagex.png",
+    image: "./assets/projects/imagex.png",
     tags: [
       {
         id: 1,
         name: "excel (VBA)",
-        path: "/assets/logos/OIP.jpg",
+        path: "./assets/logos/OIP.jpg",
       },
       {
         id: 2,
         name: "Excel",
-        path: "/assets/logos/excel.svg",
+        path: "./assets/logos/excel.svg",
       },
 
     ],
@@ -99,12 +99,12 @@ export const myProjects = [
     ],
     href: "https://github.com/codingexport/ExcelDashboard",
     logo: "",
-    image: "/assets/projects/imagess.png",
+    image: "./assets/projects/imagess.png",
     tags: [
       {
         id: 1,
         name: "Excel",
-        path: "/assets/logos/excel.svg",
+        path: "./assets/logos/excel.svg",
       },
 
     ],
@@ -124,17 +124,17 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/image.png",
+    image: "./assets/projects/image.png",
     tags: [
       {
         id: 1,
         name: "web-scraping",
-        path: "/assets/icons8-web-50.png",
+        path: "./assets/icons8-web-50.png",
       },
       {
         id: 2,
         name: "power bi",
-        path: "/assets/logos/Power_BI.svg",
+        path: "./assets/logos/Power_BI.svg",
       },
 
     ],
@@ -145,17 +145,17 @@ export const mySocials = [
   {
     name: "WhatsApp",
     href: "",
-    icon: "/assets/socials/whatsApp.svg",
+    icon: "./assets/socials/whatsApp.svg",
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/akhilesh-nishad-88ba10252/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: "./assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
     href: "https://www.instagram.com/coding_export81/",
-    icon: "/assets/socials/instagram.svg",
+    icon: "./assets/socials/instagram.svg",
   },
 ];
 
