@@ -252,10 +252,10 @@ export const certifications = [
     img: "assets/certifications/sql Basic.png",
   },
 {
-    name: "NASSCOM SQL Basic",
+    name: "NASSCOM Data Analyst",
     username: "Akhilesh Nishad",
-    body: "Certified in data analytics via NASSCOM on 17 August, 2025.",
-    img: " ",
+    body: "Certified in Data Analyst via NASSCOM on 17 August, 2025.",
+    img: "assets/certifications/nasscom-1.png",
 }
 
 ];
