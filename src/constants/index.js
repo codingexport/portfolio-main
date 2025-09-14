@@ -251,4 +251,11 @@ export const certifications = [
     body: "Certified in SQL (Basic) via HackerRank on 17 August, 2025.",
     img: "assets/certifications/sql Basic.png",
   },
+{
+    name: "NASSCOM SQL Basic",
+    username: "Akhilesh Nishad",
+    body: "Certified in data analytics via NASSCOM on 17 August, 2025.",
+    img: " ",
+}
+
 ];
